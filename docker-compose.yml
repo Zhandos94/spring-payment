@@ -1,0 +1,67 @@
+version: '3.5'
+services:
+  rabbitmq:
+    container_name: payment-rabbitmq
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    labels:
+      NAME: "rabbitmq"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "123456789"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - 5673:5672
+      - 15673:15672
+
+  account_db:
+    container_name: payment-account_db
+    image: postgres:11.6
+    restart: always
+    shm_size: 1g
+    environment:
+      POSTGRES_USER: account
+      POSTGRES_PASSWORD: account
+      POSTGRES_DB: account
+    volumes:
+      - accountdata:/var/lib/postgresql/data
+    ports:
+      - "3306:5432"
+
+  bill_db:
+    container_name: payment-bill_db
+    image: postgres:11.6
+    restart: always
+    shm_size: 1g
+    environment:
+      POSTGRES_USER: bill
+      POSTGRES_PASSWORD: bill
+      POSTGRES_DB: bill
+    volumes:
+      - billdata:/var/lib/postgresql/data
+    ports:
+      - "3307:5432"
+
+  deposit_db:
+    container_name: payment-deposit_db
+    image: postgres:11.6
+    restart: always
+    shm_size: 1g
+    environment:
+      POSTGRES_USER: deposit
+      POSTGRES_PASSWORD: deposit
+      POSTGRES_DB: deposit
+    volumes:
+      - depositdata:/var/lib/postgresql/data
+    ports:
+      - "3308:5432"
+
+#Volumes
+volumes:
+  accountdata:
+    driver: local
+  billdata:
+    driver: local
+  depositdata:
+    driver: local

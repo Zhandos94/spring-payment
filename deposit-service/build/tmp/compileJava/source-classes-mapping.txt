@@ -1,0 +1,26 @@
+kz/javastart/deposit/DepositApplication.java
+ kz.javastart.deposit.DepositApplication
+kz/javastart/deposit/entity/Deposit.java
+ kz.javastart.deposit.entity.Deposit
+kz/javastart/deposit/exception/DepositServiceException.java
+ kz.javastart.deposit.exception.DepositServiceException
+kz/javastart/deposit/rest/AccountServiceClient.java
+ kz.javastart.deposit.rest.AccountServiceClient
+kz/javastart/deposit/rest/dto/AccountResponseDTO.java
+ kz.javastart.deposit.rest.dto.AccountResponseDTO
+kz/javastart/deposit/rest/dto/BillResponseDTO.java
+ kz.javastart.deposit.rest.dto.BillResponseDTO
+kz/javastart/deposit/repository/DepositRepository.java
+ kz.javastart.deposit.repository.DepositRepository
+kz/javastart/deposit/rest/BillServiceClient.java
+ kz.javastart.deposit.rest.BillServiceClient
+kz/javastart/deposit/controller/dto/DepositRequestDTO.java
+ kz.javastart.deposit.controller.dto.DepositRequestDTO
+kz/javastart/deposit/rest/dto/BillRequestDTO.java
+ kz.javastart.deposit.rest.dto.BillRequestDTO
+kz/javastart/deposit/controller/dto/DepositResponseDTO.java
+ kz.javastart.deposit.controller.dto.DepositResponseDTO
+kz/javastart/deposit/controller/DepositController.java
+ kz.javastart.deposit.controller.DepositController
+kz/javastart/deposit/service/DepositService.java
+ kz.javastart.deposit.service.DepositService

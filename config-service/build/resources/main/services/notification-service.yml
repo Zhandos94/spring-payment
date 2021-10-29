@@ -1,0 +1,12 @@
+spring:
+  rabbitmq:
+    port: 5673
+    host: localhost
+    username: rabbitmq
+    password: 123456789
+    listener:
+      direct:
+        default-requeue-rejected: true
+
+server:
+  port: 4898

@@ -1,0 +1,2 @@
+kz/javastart/config/ConfigApplication.java
+ kz.javastart.config.ConfigApplication
