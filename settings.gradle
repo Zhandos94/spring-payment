@@ -1,9 +1,9 @@
 rootProject.name = 'payment'
+include 'config-service'
+include 'registry'
+include 'gateway'
+include 'account-service'
 include 'bill-service'
 include 'deposit-service'
-include 'account-service'
-include 'config-service'
 include 'notification-service'
-include 'registry-service'
-include 'gateway'
 

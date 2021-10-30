@@ -1,5 +1,72 @@
 version: '3.5'
 services:
+  config-service:
+    container_name: config-service
+    build: config-service
+    ports:
+      - 8001:8001
+
+  registry:
+    container_name: registry
+    restart: always
+    build: registry
+    ports:
+      - 8761:8761
+    depends_on:
+      - config-service
+
+  gateway:
+    container_name: gateway
+    restart: always
+    build: gateway
+    ports:
+      - 8989:8989
+    depends_on:
+      - config-service
+      - registry
+
+  account-service:
+    restart: on-failure
+    container_name: account-service
+    build: account-service
+    ports:
+      - 8081:8081
+    depends_on:
+      - config-service
+      - registry
+      - account_db
+
+  bill-service:
+    restart: on-failure
+    container_name: bill-service
+    build: bill-service
+    ports:
+      - 8082:8082
+    depends_on:
+      - config-service
+      - registry
+      - bill_db
+
+  deposit-service:
+    restart: on-failure
+    container_name: deposit-service
+    build: deposit-service
+    ports:
+      - 9999:9999
+    depends_on:
+      - config-service
+      - registry
+      - deposit_db
+
+  notification-service:
+    restart: on-failure
+    container_name: notification-service
+    build: notification-service
+    depends_on:
+      - config-service
+      - registry
+      - rabbitmq
+
   rabbitmq:
     container_name: payment-rabbitmq
     image: rabbitmq:3-management

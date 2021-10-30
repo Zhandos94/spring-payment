@@ -6,10 +6,10 @@ kz/javastart/deposit/exception/DepositServiceException.java
  kz.javastart.deposit.exception.DepositServiceException
 kz/javastart/deposit/rest/AccountServiceClient.java
  kz.javastart.deposit.rest.AccountServiceClient
-kz/javastart/deposit/rest/dto/AccountResponseDTO.java
- kz.javastart.deposit.rest.dto.AccountResponseDTO
 kz/javastart/deposit/rest/dto/BillResponseDTO.java
  kz.javastart.deposit.rest.dto.BillResponseDTO
+kz/javastart/deposit/rest/dto/AccountResponseDTO.java
+ kz.javastart.deposit.rest.dto.AccountResponseDTO
 kz/javastart/deposit/repository/DepositRepository.java
  kz.javastart.deposit.repository.DepositRepository
 kz/javastart/deposit/rest/BillServiceClient.java

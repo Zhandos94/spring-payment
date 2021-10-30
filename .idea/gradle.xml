@@ -15,7 +15,7 @@
             <option value="$PROJECT_DIR$/deposit-service" />
             <option value="$PROJECT_DIR$/gateway" />
             <option value="$PROJECT_DIR$/notification-service" />
-            <option value="$PROJECT_DIR$/registry-service" />
+            <option value="$PROJECT_DIR$/registry" />
           </set>
         </option>
       </GradleProjectSettings>

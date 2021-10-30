@@ -1,2 +1,0 @@
-kz/javastart/registry/RegistryApplication.java
- kz.javastart.registry.RegistryApplication
