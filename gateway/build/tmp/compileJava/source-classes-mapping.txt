@@ -1,2 +1,0 @@
-kz/javastart/gateway/GatewayApplication.java
- kz.javastart.gateway.GatewayApplication
